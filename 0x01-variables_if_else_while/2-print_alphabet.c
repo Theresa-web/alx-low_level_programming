@@ -1,16 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Entry point
  * Return: Always 0 (Sucess/correct)
  */
 int main(void)
 {
-	char sam;
+	int ch = 'a';
 
-	for (sam = 'a'; sam <= 'z'; samm++)
+	while (xh <= 'z')
 	{
-		putchar(sam);
+		putchar(ch);
+		ch++;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
