@@ -1,17 +1,26 @@
 #include <stdio.h>
 /**
- * main - prints the number in base 16
- * Return: Always 0
- */
-int mani(void)
+ * main - entry point
+ *
+ * Return: alway returns 0
+ *
+*/
+int main(void)
 {
-	int num;
-	char la;
+	unsigned char a = '0';
+	int i;
 
-	for (num = 0; num < 10; num++)
-		putchar((num % 10) + '0');
-	for (la = 'a'; la <= 'f'; la++)
-		putchar(la);
-	putchar('\n\');
-	ruturn (0);
+	for (i = 0; i < 10; i++)
+	{
+		putchar(a);
+		a++;
+	}
+	a = '1';
+	for (i = 0; i < 6; i++)
+	{
+		putchar('0' + a);
+		a++;
+	}
+	putchar('\n');
+	return (0);
 }
