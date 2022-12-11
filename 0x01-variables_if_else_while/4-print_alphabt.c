@@ -1,18 +1,22 @@
 #include <stdio.h>
 /**
- * main - print alphabhets in lowercase
- * follower by a new line, except q nad except q and e
- * Return: Always 0
- */
+ * main - entry point
+ *
+ * Return: alway returns 0
+ *
+*/
 int main(void)
 {
-	char la;
+	char a;
 
-	for (la = 'a'; la <= 'z'; la++)
+	for (a = 'a'; a <= 'z' ; a++)
+	{
+		if (a == 'q' || a == 'e')
 		{
-			if (la != 'e' && la != 'q')
-				putchar(la);
+			continue;
 		}
+		putchar(a);
+	}
 	putchar('\n');
 	return (0);
 }
