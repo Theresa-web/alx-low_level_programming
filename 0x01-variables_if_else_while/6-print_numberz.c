@@ -1,14 +1,16 @@
 #include <stdio.h>
 /**
- * main - print single didgits in base 10
- * Return: Always 0
- */
+ * main - entry point
+ *
+ * Return: alway returns 0
+ *
+*/
 int main(void)
 {
-	int num;
+	int a = 0;
 
-	for (num = 0; < 10; num++)
-		putchar((num % 10) + '0');
+	for (; a < 10 ; a++)
+		putchar('0' + a);
 	putchar('\n');
 	return (0);
 }
