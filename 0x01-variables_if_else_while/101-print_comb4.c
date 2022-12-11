@@ -1,4 +1,3 @@
-lines (35 sloc) 456 Bytes
 #include <stdio.h>
 /**
  * main - Entry point
@@ -32,6 +31,6 @@ int main(void)
 			}
 		}
 	}
-	putchar('\n')
+	putchar('\n');
 		return (0);
 }
