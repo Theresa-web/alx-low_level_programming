@@ -1,18 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
- * main - Entry point
- * Return: Always 0 (Sucess/correct)
- */
+ * main - entry point
+ *
+ * Return: alway returns 0
+ *
+*/
 int main(void)
 {
-	int ch = 'a';
+	char a;
 
-	while (xh <= 'z')
-	{
-		putchar(ch);
-		ch++;
-	}
+	for (a = 'a'; a <= 'z' ; a++)
+		putchar(a);
 	putchar('\n');
 	return (0);
-}
