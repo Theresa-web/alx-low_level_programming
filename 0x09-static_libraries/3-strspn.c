@@ -1,28 +1,31 @@
 #include "main.h"
+
 /**
-* _strspn - Entry point
-* @s: input
-* @accept: input
-* Return: Always 0 (Success)
-*/
+ * _strspn- entry level.
+ * @s: array input
+ * @accept: array input
+ * Return: returns a counted figure
+ */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int n = 0;
-	int r;
+	unsigned int i, j, found = 0;
 
-	while (*s)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (r = 0; accept[r]; r++)
+		if (s[i] != 32)
 		{
-			if (*s == accept[r])
+			for (j = 0; accept[j] != '\0'; j++)
 			{
-				n++;
-				break;
+				if (s[i] == accept[j])
+					found++;
 			}
-			else if (accept[r + 1] == '\0')
-				return (n);
+		} else
+		{
+			return (found);
 		}
-		s++;
 	}
-	return (n);
+
+	return (found);
 }
+

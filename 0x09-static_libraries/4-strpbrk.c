@@ -1,23 +1,28 @@
 #include "main.h"
+#include <stddef.h>
+
 /**
-* _strpbrk - Entry point
-* @s: input
-* @accept: input
-* Return: Always 0 (Success)
-*/
+ * _strpbrk- entry level.
+ * @s: array input
+ * @accept: array input
+ * Return: returns a pointer to a char occurence
+ */
+
 char *_strpbrk(char *s, char *accept)
 {
-	int k;
+	unsigned int i;
 
 	while (*s)
 	{
-		for (k = 0; accept[k]; k++)
+		for (i = 0; accept[i]; i++)
 		{
-		if (*s == accept[k])
-		return (s);
+			if (*s == accept[i])
+				return (s);
 		}
-	s++;
+
+		s++;
 	}
 
-return ('\0');
+	return (NULL);
 }
+

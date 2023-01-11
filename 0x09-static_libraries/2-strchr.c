@@ -1,18 +1,26 @@
 #include "main.h"
+#include <stddef.h>
+
 /**
-* _strchr - Entry point
-* @s: input
-* @c: input
-* Return: Always 0 (Success)
-*/
+ * _strchr- entry level.
+ * @s: array input
+ * @c: char input
+ * Return: returns a pointer to a char occurence
+ */
+
 char *_strchr(char *s, char c)
 {
-	int i = 0;
-
-	for (; s[i] >= '\0'; i++)
+	while (*s)
 	{
-		if (s[i] == c)
-			return (&s[i]);
+		if (*s == c)
+			return (s);
+
+		s++;
 	}
-	return (0);
+
+	if (c == '\0')
+		return (s);
+
+	return (NULL);
 }
+
