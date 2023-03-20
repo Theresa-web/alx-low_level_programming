@@ -1,3 +1,4 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic -c -fPIC *.c
-gcc -shared -o liball.so *.o
+
+for file in *.c; do
+gcc -fPIC -c "$file"
